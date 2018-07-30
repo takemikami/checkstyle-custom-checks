@@ -64,3 +64,50 @@ run check.
 ```
 $ gradle check
 ```
+
+
+## References
+
+### ClassNameByCaseCheck
+
+module name: com.github.takemikami.checkstyle.customcheck.checks.naming.ClassNameByCaseCheck
+
+properties:
+
+- format(string): regular expression of class name
+- caseType(string): parent|package|annotation
+- caseFormat(string): regular expression of parent class or package or annotation
+
+example:
+
+```
+<module name="com.github.takemikami.checkstyle.customcheck.checks.naming.ClassNameByCaseCheck">
+    <property name="format" value="^.*Bean$"/>
+    <property name="caseType" value="annotation"/>
+    <property name="caseFormat" value="JavaBean"/>
+    <message key="name.invalidPattern"
+             value="Javabean class ''{0}'' must match pattern ''{1}''."/>
+</module>
+```
+
+### AnnotationAttributesCheck
+
+module name:
+com.github.takemikami.checkstyle.customcheck.checks.annotation.AnnotationAttributesCheck
+
+properties:
+
+- need(string): comma-separated attribute name list
+- order(boolean): order check
+- avoid(string): comma-separated attribute name list
+- caseAnnotation(string): annotation name
+
+example:
+
+```
+<module name="com.github.takemikami.checkstyle.customcheck.checks.annotation.AnnotationAttributesCheck">
+    <property name="need" value="attrA,attrB"/>
+    <property name="order" value="true"/>
+    <property name="caseAnnotation" value="JavaBean"/>
+</module>
+```
