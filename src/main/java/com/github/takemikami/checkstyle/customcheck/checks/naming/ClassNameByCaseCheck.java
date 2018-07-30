@@ -1,4 +1,4 @@
-package com.github.takemikami.checkstyle.customcheck.checks;
+package com.github.takemikami.checkstyle.customcheck.checks.naming;
 
 import com.puppycrawl.tools.checkstyle.api.AbstractCheck;
 import com.puppycrawl.tools.checkstyle.api.DetailAST;
