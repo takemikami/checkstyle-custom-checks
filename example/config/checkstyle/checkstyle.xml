@@ -4,7 +4,7 @@
         "https://checkstyle.org/dtds/configuration_1_3.dtd">
 <module name="Checker">
     <module name="TreeWalker">
-        <module name="com.github.takemikami.checkstyle.customcheck.checks.ClassNameByCaseCheck">
+        <module name="com.github.takemikami.checkstyle.customcheck.checks.naming.ClassNameByCaseCheck">
             <property name="format" value="^.*Bean$"/>
             <property name="caseType" value="annotation"/>
             <property name="caseFormat" value="JavaBean"/>

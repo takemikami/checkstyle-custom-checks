@@ -1,0 +1,21 @@
+language: java
+scala:
+  - 2.11.11
+jdk:
+  - oraclejdk8
+
+env:
+  global:
+    - secure: "Cqg50uFdFBR3DZCetFQMRev5R5nNrH0pysDXXrWPcoE5AATu2XbyLaNmiK5FY2kquMNj0JHXMPtEKGue14221tjHGBY7s4bN6MIvfw2sXeOBB+1lXQizFzJMOWSKoAiR80uMwZJxmr1HB7OoztxwDRGUbmK8a43/n92jBUzvlGNz5LQVf+WcLTJDmdKZWxHy+Q4dSO7kXO2ONFAnEUVh6P5DphsjMVDbuQ5V7aJ9ytNLNtZnR9XzLH3VpVRdeaXCztkWX98cKKXBz85o0JhI81YPS6ADaOX4JgQzt6tYbr98ndrBvmQQibreQjDftS4S7YeLVIvC5Lw4NVIrlj3tEt0CRULF1b1eqMJOloQk0dVO0PRA/FFD6zi7/CjDBxUE0PxjACevXB556bvcbKYV6J6COxxpdiW53fMT/k14wlEHm0sMT3COfepnS2wZM38n3jhvnlT3HHoEZV6o7YoYZvZc6NPq5mTNTrGpsONCzkPmorRbxempPxWo3ALonDfm7dOzVWy03Au7eG4YaNGHkDiLVKiiAIikPlTk7VWNz62S5594hmiYqM6K//TJgOygIwW3edYshmRkLetXBKWHqYaMt6VDT4G3Bu1tu+6zajtRWpwplOtutsOGErAwpZbCNmbNYydeyCh87sLpCcQkd44FULDwVto1NpU3K5oF4Kk="
+
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
+script:
+  - ./gradlew check
+
+after_success:
+  - ./gradlew jacocoTestReport coveralls
+
