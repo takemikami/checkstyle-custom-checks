@@ -111,3 +111,15 @@ example:
     <property name="caseAnnotation" value="JavaBean"/>
 </module>
 ```
+
+### ApiModelPropertyCheck
+
+module name:
+com.github.takemikami.checkstyle.customcheck.checks.swagger.ApiModelPropertyCheck
+
+properties:
+
+- value(string): none, required
+- example(string): none, required, requiredIfPrimitive, typeValid
+- position(string): none, required, noDuplicated, order
+- allowableValuesStyle(string): none, commaColon
